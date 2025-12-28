@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Royal Photowaala - Professional Wedding & Event Photography</title>
+
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Royal Photowaala offers professional wedding photography, event photography, candid shoots, and cinematography services. Capture your precious moments with expert photographers." />
+  <meta name="keywords" content="wedding photography, event photography, candid photography, cinematography, photo album, royal photowaala, professional photographer, wedding videography" />
+  <meta name="author" content="Royal Photowaala" />
+  <link rel="canonical" href="https://royalphotowaala.com/" />
+  
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Royal Photowaala - Professional Wedding & Event Photography" />
+  <meta property="og:description" content="Capture your precious moments with Royal Photowaala. Expert wedding photography, candid shoots, and cinematography services." />
+  <meta property="og:url" content="https://royalphotowaala.com/" />
+  <meta property="og:image" content="https://royalphotowaala.com/og-image.jpg" />
+  <meta property="og:site_name" content="Royal Photowaala" />
+  
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Royal Photowaala - Professional Photography" />
+  <meta name="twitter:description" content="Expert wedding and event photography services" />
+  <meta name="twitter:image" content="https://royalphotowaala.com/og-image.jpg" />
+  
+  <!-- Preconnect for Performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+  
+  <!-- Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Royal Photowaala",
+    "image": "https://royalphotowaala.com/logo.jpg",
+    "@id": "https://royalphotowaala.com",
+    "url": "https://royalphotowaala.com",
+    "telephone": "+91-9307922203",
+    "priceRange": "₹₹",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "IN"
+    },
+    "sameAs": [
+      "https://www.instagram.com/royal_photowaala"
+    ],
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday"
+      ],
+      "opens": "09:00",
+      "closes": "21:00"
+    }
+  }
+  </script>
+</head>
+<body>
+<!-- ================= HEADER ================= -->
+<header>
+<nav>
+  <h1 class="logo">
+      <span id="logo-container"></span> <!-- Logo loaded dynamically -->
+      Royal Photowaala
+  </h1>
+
+  <!-- Responsive menu button -->
+  <button class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="primary-nav">
+    <span aria-hidden="true">☰</span>
+  </button>
+<!-- Theme Toggle Button -->
+<button id="theme-toggle" class="theme-toggle" aria-label="Toggle light or dark theme">
+  🌙
+</button>
+
+  <!-- Navigation Links -->
+  <ul id="primary-nav">
+      <li><a href="#home" class="home-menu-link">Home</a></li>
+      <li><a href="#best-capture">Best Capture</a></li>
+      <li><a href="#packages">Packages</a></li>
+      <li><a href="#booking">Booking</a></li>
+      <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+</header>
+
+<!-- ================= HOME SECTION ================= -->
+<section id="home" class="home">
+  <div class="overlay">
+      <h2>Capture Your Moments With Us</h2>
+      <p>Professional Wedding • Events • Portrait Photography</p>
+      <a href="#booking" class="btn">Book your event</a>
+  </div>
+</section>
+
+<!-- ================= GALLERY SECTION ================= -->
+<section id="best-capture" class="best-capture">
+  <h2>Our Best Captures</h2>
+  <div class="gallery" id="gallery"></div> <!-- Gallery images loaded from IndexedDB -->
+</section>
+
+<!-- ================= PACKAGES SECTION ================= -->
+<section id="packages" class="packages">
+  <h2>Our Packages</h2>
+  <div class="package-list">
+      <!-- Package Details -->
+      <div class="package">
+          <h3>Product 1</h3>
+          <p><strong>Traditional Photography</strong></p>
+          <p>Full Frame Sensor</p>
+      </div>
+      <div class="package">
+          <h3>Product 2</h3>
+          <p><strong>Candid Photography</strong></p>
+          <p>Creative with Full Frame Sensor</p>
+      </div>
+      <div class="package">
+          <h3>Product 3</h3>
+          <p><strong>Traditional Videography</strong></p>
+          <p>4K Resolution</p>
+      </div>
+      <div class="package">
+          <h3>Product 4</h3>
+          <p><strong>Cinematography</strong></p>
+          <p>1 Teaser, 1 Main Video – 4K with Pro</p>
+      </div>
+      <div class="package">
+          <h3>Product 5</h3>
+          <p><strong>Photobook Advance Digital Album</strong></p>
+          <p>Silk Matt with High Soft Touch</p>
+      </div>
+  </div>
+</section>
+
+<!-- ================= BOOKING SECTION ================= -->
+<section id="booking" class="booking">
+  <div class="booking-container">
+      <h2>Check Availability</h2>
+
+      <!-- Booking Form -->
+      <form class="booking-form" id="bookingForm" novalidate>
+          <div class="form-group">
+            <label for="name" class="visually-hidden">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="Full Name" autocomplete="name" required aria-required="true" />
+          </div>
+          
+          <div class="form-group">
+            <label for="email" class="visually-hidden">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="Email Address" autocomplete="email" required aria-required="true" />
+          </div>
+          
+          <div class="form-group">
+            <label for="phone" class="visually-hidden">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="Phone Number (10 digits)" autocomplete="tel" pattern="[0-9]{10}" required aria-required="true" />
+          </div>
+
+          <!-- Package Dropdown -->
+          <div class="form-group">
+            <label for="package" class="visually-hidden">Select Package</label>
+            <select id="package" name="package" required aria-required="true">
+                  <option value="" disabled selected>Select a Package</option>
+                  <option value="Product 1 - Traditional Photography">Product 1 - Traditional Photography</option>
+                  <option value="Product 2 - Candid Photography">Product 2 - Candid Photography</option>
+                  <option value="Product 3 - Traditional Videography">Product 3 - Traditional Videography</option>
+                  <option value="Product 4 - Cinematography">Product 4 - Cinematography</option>
+                  <option value="Product 5 - Photobook Advance Digital Album">Product 5 - Photobook Advance Digital Album</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="date" class="visually-hidden">Event Date</label>
+            <input type="date" id="date" name="date" required aria-required="true" />
+          </div>
+          
+          <div class="form-group">
+            <label for="details" class="visually-hidden">Event Details</label>
+            <textarea id="details" name="details" placeholder="Tell us about your event (optional)" autocomplete="off" rows="4"></textarea>
+          </div>
+          
+          <button type="submit" class="submit-btn">Check Availability Now</button>
+      </form>
+  </div>
+</section>
+
+<!-- ================= REVIEWS SECTION ================= -->
+<section id="reviews" class="reviews">
+  <h2>What Our Customers Say</h2>
+  <div id="reviewList" class="review-list"></div>
+  
+  <div class="review-form-container">
+    <h3>Leave a Review</h3>
+    <form id="reviewForm" class="review-form">
+      <input type="text" id="reviewName" placeholder="Your Name" required />
+      <select id="reviewRating" required>
+        <option value="">Rating</option>
+        <option value="5">⭐⭐⭐⭐⭐</option>
+        <option value="4">⭐⭐⭐⭐</option>
+        <option value="3">⭐⭐⭐</option>
+        <option value="2">⭐⭐</option>
+        <option value="1">⭐</option>
+      </select>
+      <textarea id="reviewComment" placeholder="Your Review" required></textarea>
+      <button type="submit">Submit Review</button>
+    </form>
+  </div>
+</section>
+
+<!-- ================= CONTACT SECTION ================= -->
+<section id="contact" class="contact">
+  <h2>Contact Us</h2>
+  <div class="socials">
+      <a href="https://www.instagram.com/royal_photowaala?igsh=bzg5YXBwOXdqMngy" target="_blank" rel="noopener noreferrer" aria-label="Visit our Instagram page">📷 Instagram</a>
+      <a href="https://wa.me/919307922203" target="_blank" rel="noopener noreferrer" aria-label="Contact us on WhatsApp">💬 WhatsApp</a>
+      <a href="mailto:info@royalphotowaala.com" aria-label="Send us an email">✉️ Email</a>
+  </div>
+</section>
+  
+<!-- ================= LOCATION SECTION ================= -->
+<section id="location" class="location">
+  <h2>Our Location</h2>
+
+  <div class="location-details">
+    <p><strong>Royal Photowaala</strong></p>
+    <p>Sangola, Maharashtra, India</p>
+    <p>📞 +91 9307922203</p>
+  </div>
+
+  <!-- Google Map Embed -->
+  <div class="map-container">
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3784.329145525898!2d75.19378831489007!3d17.43384698766474!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc6b9d3a7e7c1d1%3A0x8f0f8a2b2b3b4b5b!2sRoyal%20Photowaala%2C%20Sangola%2C%20Maharashtra%20413307!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin"
+      width="100%" 
+      height="350" 
+      style="border:0;" 
+      allowfullscreen="" 
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+      aria-label="Google Map showing Royal Photowaala location">
+    </iframe>
+  </div>
+</section>
+
+  <!-- Terms and Privacy policy links -->
+  <section id="policies" class="policies">
+    <h2>Legal</h2>
+    <p>
+      <a href="terms.html" aria-label="Read our terms and conditions">Terms and Conditions</a> | 
+      <a href="privacy.html" aria-label="Read our privacy policy">Privacy Policy</a>
+    </p>
+  </section>
+ 
+  
+<!-- ================= FOOTER ================= -->
+<footer>
+  <p>© 2025 Royal Photowaala. All rights reserved. | Designed by 
+  <strong><a href="https://www.instagram.com/mr_aniket49?igsh=MXkwczhuMDJwa2gzbg==" target="_blank" rel="noopener noreferrer">@aniket_kumbhar</a></strong></p>
+</footer>
+
+<!-- ================= MAIN SCRIPT ================= -->
+<script src="js/main.js"></script>
+</body>
+</html>
+
