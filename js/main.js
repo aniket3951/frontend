@@ -4,7 +4,7 @@
  */
 
 // API Configuration - update this to point to your backend
-const API_BASE_URL = window.location.origin; // Uses same origin
+const API_BASE_URL = "https://backend-4hva.onrender.com";
 
 document.addEventListener("DOMContentLoaded", () => {
   // ==========================
@@ -401,4 +401,5 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
 
