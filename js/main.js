@@ -251,10 +251,12 @@ document.addEventListener("DOMContentLoaded", () => {
         submitBtn.innerHTML = '<span class="spinner"></span> Processing...';
         
         const response = await fetch(`${API_BASE_URL}/api/book`, {
-          method: 'POST',
+            method: 'POST',
           headers: { 'Content-Type': 'application/json' },
+          credentials: 'include',   // ✅ ADD THIS LINE
           body: JSON.stringify(formData)
         });
+
         
         const data = await response.json();
         
@@ -325,7 +327,9 @@ document.addEventListener("DOMContentLoaded", () => {
   // ⭐ Reviews Section
   // ==========================
   // Load Reviews
-  fetch(`${API_BASE_URL}/api/reviews`)
+fetch(`${API_BASE_URL}/api/reviews`, {
+  credentials: 'include'   // ✅ ADD
+})
     .then(res => res.json())
     .then(data => {
       const list = document.getElementById("reviewList");
@@ -368,10 +372,12 @@ document.addEventListener("DOMContentLoaded", () => {
       };
 
       fetch(`${API_BASE_URL}/api/reviews`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData)
-      })
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  credentials: 'include',   // ✅ ADD
+  body: JSON.stringify(formData)
+})
+
       .then(res => res.json())
       .then(data => {
         if (data.success) {
@@ -404,6 +410,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
 
 
 
